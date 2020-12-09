@@ -26,6 +26,7 @@ describe('init', () => {
         expect(stderr).toBeFalsy();
         expect(stdout).toContain(firstPrompt);
     });
+
     it('should run with cli when auto is supplied', () => {
         const { stdout } = spawnSync(path.resolve(__dirname, '../bin/cli.js'), ['init', '--auto'], {
             cwd: genPath,
